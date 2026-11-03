@@ -1,7 +1,6 @@
-
 local LIMITE = 4913
 
-local ANTIGO = "lanterna:lampada_mese"
+local ANTIGO = "iluminint:lampada_mese"
 local NOVO = "air"
 
 minetest.register_chatcommand("fixme", {
@@ -19,7 +18,7 @@ minetest.register_chatcommand("fixme", {
 
         if not raio or raio < 2 or raio > 8 or
            raio ~= math.floor(raio) then
-            return false, "Enter an integer between 2 and 8"
+            return false, "Enter an integer between 2 to 8"
         end
 
         local origem = vector.round(player:get_pos())
@@ -61,7 +60,7 @@ minetest.register_chatcommand("fixme", {
 
 local LIMITE = 4913
 
-local ANTIGO = "lanterna:lampada_mese"
+local ANTIGO = "iluminint:lampada_mese"
 local NOVO = "air"
 
 minetest.register_chatcommand("fixme", {
@@ -79,7 +78,7 @@ minetest.register_chatcommand("fixme", {
 
         if not raio or raio < 2 or raio > 8 or
            raio ~= math.floor(raio) then
-            return false, "Enter an integer between 2 and 8"
+            return false, "Enter an integer between 2 to 8"
         end
 
         local origem = vector.round(player:get_pos())

@@ -11,7 +11,7 @@ local jogador_ativo = nil
 local lampada_pos = nil
 local ciclo_id = 0
 
-local LAMPADA = "lanterna:lampada_mese"
+local LAMPADA = "iluminint:lampada_mese"
 
 -- REGISTRAR LAMPADA DE MESE
 minetest.register_node(LAMPADA, {
@@ -130,9 +130,10 @@ end
 
 -- ATIVAR
 minetest.register_chatcommand("l_on", {
-    description = "Turn on lantern",
+    description = "Turn on lantern system",
+params = "Turn on",
 
-    func = function(name)
+    func = function(name, param)
 
         if not HABILITADO then
             return false, "System disabled"
@@ -155,9 +156,10 @@ minetest.register_chatcommand("l_on", {
 
 -- DESATIVAR
 minetest.register_chatcommand("l_off", {
-    description = "Turning off lantern",
+    description = "Turn off lantern system",
+    params = "Turn off",
 
-    func = function()
+    func = function(name, param)
 
         ativo = false
         ciclo_id = ciclo_id + 1
